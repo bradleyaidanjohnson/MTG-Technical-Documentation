@@ -1,40 +1,58 @@
 html{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
 }
 
 #navbar {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 250px;
+  width: 200px;
+  min-width: 150px;
   height: 100%;
-  background-color: rgb(217, 219, 219);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(27, 2, 0);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
 }
 
 #navbar h1 {
   font-size: 0.6em;
+  color: rgb(245, 252, 145);
 }
 
 #main-doc {
   position: absolute;
-  margin-left: 250px;
-  padding: -10Px;
+  margin-left: 200px;
+  padding: 0Px;
   margin-bottom: 100px;
   background-color: #f3f2f4;
-  width:80%
+  width:calc(100vw - 235px);
+}
+
+#main-doc a{
+  color:#553300
 }
 
 #navbar li {
   list-style: none;
+  position: relative;
+  width: 100%;
+  
 }
+
+#navbar ul {
+  list-style-position: inside;
+  margin-block-start: .2em;
+  padding-inline-start: 15px;
+}
+
 
 #navbar a {
   display: block;
   padding: 1px 20px;
   text-decoration: none;
   cursor: pointer;
-  font-size: .8em;
+  font-size: 1.2em;
   padding-inline-start: 0;
   margin-inline-start: 0;
 }
@@ -44,7 +62,7 @@ html{
 }
 
 #navbar a:visited, #navbar a:link, #navbar a:hover, #navbar a:active {
-  color: black;
+  color: rgb(223, 255, 220);
 }
 
 #navbar .list3 {
@@ -52,8 +70,55 @@ html{
 }
 
 header {
-  color: rgb(20, 20, 20);
+  color: rgb(5, 46, 0);
   text-align: center;
   font-size: 1.6em;
   font-weight: thick;
+}
+
+.battle {
+  transform: rotate(90deg);
+}
+
+img {
+  max-width: 75vw;
+  height: 250px;
+  align-self: center;
+  display: inline-block;
+}
+
+.main-section figcaption {
+  font-style: italic;
+  color: rgb(63, 31, 1);
+}
+
+@media (max-width: 775px) {
+  #navbar .list1 {
+    height:200px;
+    overflow-y: auto;
+  }
+
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    
+    margin: 0;
+    width: 100%;
+    border:none;
+    max-height: 240px;
+    border-bottom: 1px solid;
+    overflow-y: clip;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 240px;
+    width:calc(100vw - 30px);
+    padding-right:0;
+    margin-right:0px;
+    top:5px;
+  }
 }
